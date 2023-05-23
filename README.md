@@ -29,6 +29,10 @@ Esses usuário devem fazer partes dos respectivos grupos de acesso.
 - Restringir acesso aos buckets, via `AssumeRole`
   - [ ] o `developer_group` só poderá acessar o bucket `customerdata`
 
+## Desenho da solução
+
+![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/580e19bb-5042-4d80-9631-725fadd1941d)
+
 ## Descrições adicionais
 
 Quando se trata de acesso/comunicação entre recursos da AWS, a utilização de
