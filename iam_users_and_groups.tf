@@ -13,6 +13,15 @@ resource "aws_iam_user" "users" {
   tags     = var.tags
 }
 
+resource "aws_iam_user_login_profile" "users" {
+  for_each = aws_iam_user.users
+  user     = each.key
+}
+
+output "users_passwords" {
+  value = { for k, v in aws_iam_user_login_profile.users : k => v.password }
+}
+
 # --------------------------------- Groups -----------------------------------
 resource "aws_iam_group" "groups" {
   for_each = local.groups
