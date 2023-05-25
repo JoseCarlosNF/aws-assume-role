@@ -1,8 +1,7 @@
 # IAM - Assume role
 
-O objetivo desse repositório é documentar o laboratório executado durante os
-estudo para a certificação de **Arquiteto de Soluções da AWS**, sobre o tópico
-de `Assume Role` do IAM.
+O objetivo desse repositório é documentar o laboratório sobre o tópico de
+`Assume Role` do IAM.
 
 ## Diagrama de utilização de roles
 
@@ -14,7 +13,8 @@ de `Assume Role` do IAM.
   - [ ] `admin_group`
   - [ ] `developer_group`
 
-- Criar 3 usuários IAM, todos com a mesma senha.
+- Criar 3 usuários IAM, e mostrar suas respectivas senhas (aplicável apenas em
+  ambientes de testes).
   - [ ] `admin`
   - [ ] `dev1`
   - [ ] `dev2`
@@ -31,7 +31,7 @@ Esses usuário devem fazer partes dos respectivos grupos de acesso.
   - [ ] `customerdata`
 
 - Restringir acesso aos buckets, via `AssumeRole`
-  - [ ] o `developer_group` só poderá acessar o bucket `customerdata`
+  - [ ] o grupo `developers` só poderá acessar o bucket `appconfig`
 
 ## Desenho da solução
 
