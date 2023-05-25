@@ -33,8 +33,8 @@ data "aws_iam_group" "groups" {
   group_name = each.key
 }
 
-output "arn_users_by_group" {
-  value = {for k, v in data.aws_iam_group.groups: k => v.users[*].arn}
+locals {
+  arn_users_by_group = {for k, v in data.aws_iam_group.groups: k => v.users[*].arn}
 }
 
 # ---------------------------- Group Membership ------------------------------

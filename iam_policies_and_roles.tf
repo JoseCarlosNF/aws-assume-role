@@ -68,7 +68,7 @@ data "aws_iam_policy_document" "S3Developers" {
       type = "AWS"
       identifiers = concat(
         [data.aws_caller_identity.current.account_id],
-        [for user in local.groups.developers : aws_iam_user.users[user].arn]
+        local.arn_users_by_group["developers"],
       )
     }
   }
@@ -82,7 +82,7 @@ data "aws_iam_policy_document" "S3Admins" {
       type = "AWS"
       identifiers = concat(
         [data.aws_caller_identity.current.account_id],
-        [for user in local.groups.admins : aws_iam_user.users[user].arn],
+        local.arn_users_by_group["admins"],
       )
     }
   }
