@@ -23,7 +23,7 @@ Esses usuário devem fazer partes dos respectivos grupos de acesso.
 
 - Criar 2 policies concedendo acesso aos seguintes buckets de forma
       separada.
-  - [ ] `customerdata`
+  - [ ] `appconfig`
   - [ ] `customerdata`
 
 - Restringir acesso aos buckets, via `AssumeRole`
@@ -31,7 +31,7 @@ Esses usuário devem fazer partes dos respectivos grupos de acesso.
 
 ## Desenho da solução
 
-![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/580e19bb-5042-4d80-9631-725fadd1941d)
+![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/7936a2c1-6960-4dde-8066-85606e0decf6)
 
 ## Descrições adicionais
 
