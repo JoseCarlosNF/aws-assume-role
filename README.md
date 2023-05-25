@@ -6,7 +6,7 @@ de `Assume Role` do IAM.
 
 ## Diagrama de utilização de roles
 
-![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/f546501f-47b7-442b-897a-af16ec80d8d5)
+![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/9a34a0be-181f-474f-be1e-a18e70ae3501)
 
 ## Atividades que devem ser executadas
 
@@ -35,7 +35,7 @@ Esses usuário devem fazer partes dos respectivos grupos de acesso.
 
 ## Desenho da solução
 
-![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/56c40c57-6e98-45b5-a304-7a632dd41cdb)
+![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/6cabe942-f306-4686-8f29-9f5e7b895f48)
 
 ## Descrições adicionais
 
