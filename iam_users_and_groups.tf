@@ -28,6 +28,15 @@ resource "aws_iam_group" "groups" {
   name     = each.key
 }
 
+data "aws_iam_group" "groups" {
+  for_each = aws_iam_group.groups
+  group_name = each.key
+}
+
+output "arn_users_by_group" {
+  value = {for k, v in data.aws_iam_group.groups: k => v.users[*].arn}
+}
+
 # ---------------------------- Group Membership ------------------------------
 resource "aws_iam_group_membership" "admins" {
   name  = "admins_membership"
