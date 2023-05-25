@@ -4,6 +4,10 @@ O objetivo desse repositório é documentar o laboratório executado durante os
 estudo para a certificação de **Arquiteto de Soluções da AWS**, sobre o tópico
 de `Assume Role` do IAM.
 
+## Diagrama de utilização de roles
+
+![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/f546501f-47b7-442b-897a-af16ec80d8d5)
+
 ## Atividades que devem ser executadas
 
 - Criar 2 grupos de usuários
@@ -31,7 +35,7 @@ Esses usuário devem fazer partes dos respectivos grupos de acesso.
 
 ## Desenho da solução
 
-![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/7936a2c1-6960-4dde-8066-85606e0decf6)
+![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/56c40c57-6e98-45b5-a304-7a632dd41cdb)
 
 ## Descrições adicionais
 
