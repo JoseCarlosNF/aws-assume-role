@@ -36,15 +36,22 @@ Esses usuário devem fazer partes dos respectivos grupos de acesso.
 ## Descrições adicionais
 
 Quando se trata de acesso/comunicação entre recursos da AWS, a utilização de
-roles é sempre a melhor escolha. Isso por que evitamos utilizar credências
-perpétuas (os IAMs convencionais) e consequentemente diminuímos o risco de
+roles é na maioria das vezes uma boa escolha. Isso por que, ao utilizar as
+roles estamos evitando o uso de credências perpétuas (os IAMs convencionais,
+com `AccessKey` e `SecretKey`) e consequentemente diminuímos o risco de
 vazamento de credências.
 
-As roles podem ser interpretadas como crachás de acesso provisório. Isso por
-que quando um recurso utilizasse de uma role para acessar outro, o seu acesso
-não está sendo concedido diretamente, mas sim através da role. É como se um
-filho pudesse acessar um clube por que é dependente de seus pais, e a
-associação ao clube é paga pelos pais, e dessa forma o filho tem acesso ao
-clube.
+As roles podem ser interpretadas como **crachás de acesso provisório**. Isso
+por que, quando um recurso utiliza uma role para acessar outro, o acesso não
+está sendo concedido diretamente, mas sim através da role. É como se um filho
+pudesse acessar um clube por que é dependente de seus pais.
 
+O principal caso de uso das roles é a definição de cargos e/ou permissões
+temporárias.
 
+No cenário em questão, por exemplo, os desenvolvedores só podem ter acesso aos
+arquivos do bucket `appconfig` através da role específica. Ou seja, se um
+desenvolvedor qualquer tentar acessar o bucket ele não conseguirá. Terá que
+explicitamente, por vontade/necessidade assumir a role necessária para executar
+acessar os dados do bucket. Apesar de parecer mais trabalhoso, e é, essa
+abordagem diminuí os riscos de modificação acidental dos dados.
