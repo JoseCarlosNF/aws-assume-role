@@ -62,6 +62,7 @@ resource "aws_iam_policy" "CustomerData" {
 data "aws_caller_identity" "current" {}
 
 data "aws_iam_policy_document" "S3Developers" {
+  depends_on = [ aws_iam_group.groups ]
   statement {
     actions = ["sts:AssumeRole"]
     principals {
@@ -75,6 +76,7 @@ data "aws_iam_policy_document" "S3Developers" {
 }
 
 data "aws_iam_policy_document" "S3Admins" {
+  depends_on = [ aws_iam_group.groups ]
   statement {
     sid     = "AllowAdminsAccessS3CustomerData"
     actions = ["sts:AssumeRole"]

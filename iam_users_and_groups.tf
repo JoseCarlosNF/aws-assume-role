@@ -29,6 +29,7 @@ resource "aws_iam_group" "groups" {
 }
 
 data "aws_iam_group" "groups" {
+  depends_on = [ aws_iam_group_membership.admins, aws_iam_group_membership.developers ]
   for_each = aws_iam_group.groups
   group_name = each.key
 }
