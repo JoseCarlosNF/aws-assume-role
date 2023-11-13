@@ -26,11 +26,13 @@ Para esse cenário utilizaremos as seguintes funcionalidades do IAM:
 
 - [ ] criar usuário IAM
 - [ ] gerar credenciais de acesso via API
+- [ ] anexar policy que possibilite usar o `sts:AssumeRole`
 
 ### Account B
 
-- [ ] cria fila SQS
 - [ ] criar role
     - adicionar `assume_role_policy`, apontando o usuário IAM criado
+- [ ] cria fila SQS
+    - aplicar na fila uma policy que possibilite as ações da role. 
 - [ ] criar policy
     - Deve conceder permissão de leitura e escrita na fila.
