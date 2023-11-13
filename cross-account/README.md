@@ -36,3 +36,41 @@ Para esse cenário utilizaremos as seguintes funcionalidades do IAM:
     - aplicar na fila uma policy que possibilite as ações da role. 
 - [ ] criar policy
     - Deve conceder permissão de leitura e escrita na fila.
+
+## :test_tube: Como testar
+
+Sabendo que estamos usando as _roles_ para fazer o permissionamento necessário.
+Precisaremos utilizar o `sts` (_Security Token Service_) para assumir as
+permissões na conta de destino (`account b`).
+
+Para isso, devemos gerar uma sessão a partir do usuário IAM criado na `accont
+a`. Recomendo utilizar o comando a seguir, na cli da AWS. Porém isso também
+pode ser feito de forma programática, através das APIs e SDKs:
+
+```
+aws sts assume-role --role-arn ARN_DA_ROLE --role-session-name NOME_DA_SESSAO --duration-seconds 900
+```
+
+De posse do `access_id`, `secret_key` e `session_token` gerado pelo comando.
+Use-os como variável de ambiente de um novo terminal, com acesso a cli da AWS
+(ou como se sentir mais confortável).
+
+```
+export AWS_ACCESS_KEY_ID="";
+export AWS_SECRET_ACCESS_KEY="";
+export AWS_SESSION_TOKEN="";
+```
+
+Para certificar-se que a role foi assumida, pode-se utilizar o comando a seguir.
+Ele retorna qual perfil de acesso está sendo utilizado.
+
+```
+aws sts get-caller-identity
+```
+
+Com a role assumida, podemos tentar realizar as ações designadas na policy da
+role.
+
+```
+aws sqs get-queue-url --queue-name cross-account-aws-solutions-architect
+```
