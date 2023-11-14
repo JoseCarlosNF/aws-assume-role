@@ -13,6 +13,8 @@ O cenário que estou propondo é bastante comum, é principalmente apresentado
 quando precisamos trabalhar com os dados de um parceiro, ou mesmo quando
 possuímos uma segregação de contas por áreas, dentro de uma organização.
 
+![image](https://github.com/JoseCarlosNF/aws-assume-role/assets/38339200/2010c11a-4c9a-410d-b936-e049853e53ff)
+
 ### Componentes
 
 Para esse cenário utilizaremos as seguintes funcionalidades do IAM:
